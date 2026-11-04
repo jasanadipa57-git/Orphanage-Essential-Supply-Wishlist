@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Essential Supplies Wishlist</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Essential Supplies Wishlist</h1>
+
+        <p>
+            Help us provide essential items for children
+            living in the orphanage.
+        </p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="wishlist.html">Essential Supplies</a>
+            <a href="sponsorship.html">Birthday Sponsorship</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="wishlist-section">
+
+            <h2>Items We Need</h2>
+
+            <p>
+                Choose an item and enter the quantity
+                you would like to contribute.
+            </p>
+
+            <div class="supply-container"
+            id="supply-container">
+
+                <article class="supply-card">
+                    <h3>Rice</h3>
+                    <p>Needed: 50 kg</p>
+                    <p>Price per kg: ₹60</p>
+
+                    <label for="rice-quantity">
+                        Quantity (kg):
+                    </label>
+
+                    <input
+                        type="number"
+                        id="rice-quantity"
+                        min="1"
+                        max="50"
+                        value="1"
+                    >
+
+                    <button
+                        type="button"
+                        onclick="selectSupply('Rice', 60, 'rice-quantity', 50)">
+                        Select Rice
+                    </button>
+                </article>
+
+                <article class="supply-card">
+                    <h3>Notebooks</h3>
+                    <p>Needed: 100 notebooks</p>
+                    <p>Price per notebook: ₹40</p>
+
+                    <label for="notebook-quantity">
+                        Quantity:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="notebook-quantity"
+                        min="1"
+                        max="100"
+                        value="1"
+                    >
+
+                    <button
+                        type="button"
+                        onclick="selectSupply('Notebooks', 40, 'notebook-quantity', 100)">
+                        Select Notebooks
+                    </button>
+                </article>
+
+                <article class="supply-card">
+                    <h3>Soap</h3>
+                    <p>Needed: 100 bars</p>
+                    <p>Price per bar: ₹30</p>
+
+                    <label for="soap-quantity">
+                        Quantity:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="soap-quantity"
+                        min="1"
+                        max="100"
+                        value="1"
+                    >
+
+                    <button
+                        type="button"
+                        onclick="selectSupply('Soap', 30, 'soap-quantity', 100)">
+                        Select Soap
+                    </button>
+                </article>
+
+            </div>
+
+            <div id="supply-result" aria-live="polite">
+            </div>
+            <h2>Donate Essential Supplies</h2>
+
+<form id="donation-form" class="colorful-form">
+
+    <h2>Make a Donation ❤️</h2>
+    <p class="form-subtitle">Your kindness can make a difference!</p>
+
+    <label>Your Name:</label>
+    <input
+        type="text"
+        name="donor_name"
+        placeholder="Enter your full name"
+        required
+    >
+
+    <label>Email Address:</label>
+    <input
+        type="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+    >
+
+    <label>Select Item:</label>
+    <select name="item_name" required>
+        <option value="">Choose an item</option>
+        <option value="Rice">Rice</option>
+        <option value="Notebooks">Notebooks</option>
+        <option value="Soap">Soap</option>
+    </select>
+
+    <label>Quantity:</label>
+    <input
+        type="number"
+        name="quantity"
+        min="1"
+        placeholder="Enter quantity"
+        required
+    >
+
+    <label>Message (Optional):</label>
+    <textarea
+        name="message"
+        placeholder="Write a kind message..."
+    ></textarea>
+
+    <button type="submit">
+        ❤️ Submit Donation
+    </button>
+
+</form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>CareConnect | Every contribution makes a difference.</p>
+    </footer>
+
+</body>
+</html>

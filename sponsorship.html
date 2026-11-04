@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Meal Sponsorship</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Birthday Meal Sponsorship</h1>
+
+        <p>
+            Celebrate a child's birthday by sponsoring
+            a special meal.
+        </p>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="wishlist.html">Essential Supplies</a>
+            <a href="sponsorship.html">Birthday Sponsorship</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="sponsorship-section">
+
+            <h2>Choose a Meal Package</h2>
+
+            <form id="sponsorship-form" class="colorful-form">
+
+    <h2>🎂 Sponsor a Birthday Meal</h2>
+
+    <p class="form-subtitle">
+        Make a child's birthday special with your kindness!
+    </p>
+
+    <label for="sponsor-name">Your Name:</label>
+    <input
+        type="text"
+        id="sponsor-name"
+        name="sponsor_name"
+        placeholder="Enter your full name"
+        required
+        maxlength="100"
+    >
+
+    <label for="sponsor-email">Email Address:</label>
+    <input
+        type="email"
+        id="sponsor-email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+    >
+
+    <label for="meal-package">Select a Meal Package:</label>
+    <select id="meal-package" name="meal_package" required>
+        <option value="">Choose a package</option>
+        <option value="1500">Small Meal Package - ₹1500</option>
+        <option value="3000">Medium Meal Package - ₹3000</option>
+        <option value="5000">Large Meal Package - ₹5000</option>
+    </select>
+
+    <label for="meal-guests">Number of Children:</label>
+    <input
+        type="number"
+        id="meal-guests"
+        name="quantity"
+        min="1"
+        max="500"
+        value="1"
+        required
+    >
+
+    <label for="meal-date">Meal Date:</label>
+    <input
+        type="date"
+        id="meal-date"
+        name="meal_date"
+        required
+    >
+
+    <label for="child-name">Child's Name (Optional):</label>
+    <input
+        type="text"
+        id="child-name"
+        name="child_name"
+        maxlength="100"
+        placeholder="Enter child's name"
+    >
+
+    <label for="sponsor-message">Message (Optional):</label>
+    <textarea
+        id="sponsor-message"
+        name="message"
+        rows="4"
+        placeholder="Write your birthday wishes..."
+    ></textarea>
+
+    <div class="total-box">
+        <span>🎁 Estimated Total:</span>
+        <strong id="meal-total">₹0</strong>
+    </div>
+
+    <button type="submit">
+        ❤️ Submit Sponsorship Request
+    </button>
+
+</form>
+
+            <div
+                id="sponsorship-result"
+                aria-live="polite"
+            ></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>CareConnect | Make a birthday memorable.</p>
+    </footer>
+
+</body>
+</html>
